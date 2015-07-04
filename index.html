@@ -52,7 +52,7 @@ addLoadEvent(function() {
  
  
     <div style="padding:3px 2px;border-bottom:1px solid #ccc">Ajax Form</div>  
-    <form id="ff" action="_self" method="post">
+    <form id="ff">
  
 <table>
 <tbody><tr>
@@ -116,6 +116,7 @@ $('#ff').form({
 
 $('#ff').submit(function(evt) {
  
+   alert('sending your data......');
     evt.preventDefault();
  
     var postTo = 'http://edufruit.com/save_shopping.php';
