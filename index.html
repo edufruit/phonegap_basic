@@ -93,7 +93,7 @@ addLoadEvent(function() {
 <td>AffiliateImage : <input type="text" id="AffiliateImage" name="AffiliateImage"></td>
 </tr>
  
-<tr><td><input type="button" value="Submit"></td> 
+<tr><td><input type="button" id="senddata" value="Submit"></td> 
  
 </tr></tbody></table>
 </form>
@@ -114,7 +114,7 @@ $('#ff').form({
 
 
 
-$('#ff').submit(function(evt) {
+$('#senddata').click(function(evt) {
  
    alert('sending your data......');
     evt.preventDefault();
