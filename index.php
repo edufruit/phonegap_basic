@@ -114,7 +114,9 @@ $('#ff').form({
 
 
 
-$('#ff').submit(function() {
+$('#ff').submit(function(evt) {
+ 
+    evt.preventDefault();
  
     var postTo = 'http://edufruit.com/save_shopping.php';
  
