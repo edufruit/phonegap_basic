@@ -125,7 +125,7 @@ $('#ff').submit(function(evt) {
         alert(data);
         if(data != "") {
             // do something
-            alert('Thanks!');
+            alert('Thanks! = '+ data.LinkGiven);
         } else {
             // couldn't connect
         }
