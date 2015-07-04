@@ -98,19 +98,45 @@ addLoadEvent(function() {
 </tr></tbody></table>
 </form>
 <script type="text/javascript">
+
+/*
+
 $('#ff').form({  
     success:function(data){  
         $.messager.alert('Info', data, 'info');  
       }  
 });
+*/
+
+
+
+
+
+
+
+$('#ff').submit(function() {
+ 
+    var postTo = 'http://edufruit.com/save_shopping.php';
+ 
+    $.post(postTo,({first_name: $('#AffiliateLink').val()}),
+    function(data) {
+        alert(data);
+        if(data != "") {
+            // do something
+            alert('Thanks!');
+        } else {
+            // couldn't connect
+        }
+        },'json');
+    return false;
+ 
+});
+
+
+
+
+
+
 </script>
 
-
-<?php
-
-if(isset($_POST['submit']))
-{
-var_dump($_POST);
-}
-?>
   
