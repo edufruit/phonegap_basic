@@ -52,7 +52,7 @@ addLoadEvent(function() {
  
  
     <div style="padding:3px 2px;border-bottom:1px solid #ccc">Ajax Form</div>  
-    <form id="ff" action="http://html5.neq3.com/CouponsApp/addcoupon.php" method="post">
+    <form id="ff" action="_self" method="post">
  
 <table>
 <tbody><tr>
@@ -106,5 +106,11 @@ $('#ff').form({
 </script>
 
 
+<?php
 
+if(isset($_POST['submit']))
+{
+var_dump($_POST);
+}
+?>
   
