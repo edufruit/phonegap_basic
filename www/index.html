@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+          <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+          <title>Hello Sweeeeeetyy</title>
+    </head> 
+<title>Insert title here</title>
+ 
+<!-- --> 
+
+<script type="text/javascript" src="jquery.min.js"></script>
+  
+    <div style="padding:3px 2px;border-bottom:1px solid #ccc">Ajax Form</div>  
+    <form id="ff">
+ 
+<table>
+<tbody> 
+<tr>
+<td>
+<select name="Website" id="Website" onchange="changeCities();">
+  <option value="">Please select a Website</option>
+</select>
+</td>
+</tr><tr>
+<td>CouponTitle : <input type="text" id="CouponTitle" name="CouponTitle"></td>
+</tr>
+<tr>
+<td>CouponDescription : <input type="text" id="CouponDescription" name="CouponDescription"></td>
+</tr>
+<tr>
+<td>CouponCode : <input type="text" id="CouponCode" name="CouponCode"></td>
+</tr>
+<tr>
+<td>AffiliateLink : <input type="text" id="AffiliateLink" name="AffiliateLink"></td>
+</tr>
+<tr>
+<td>AffiliateImage : <input type="text" id="AffiliateImage" name="AffiliateImage"></td>
+</tr>
+ 
+<tr><td><input type="button" id="senddata" value="Submit"></td> 
+ 
+</tr></tbody></table>
+</form>
+
+
+ <script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // are we running in native app or in a browser?
+    window.isphone = false;
+    if(document.URL.indexOf("http://") === -1 
+        && document.URL.indexOf("https://") === -1) {
+        window.isphone = true;
+    }
+    if( window.isphone ) {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    } else {
+        onDeviceReady();
+    }
+});
+function onDeviceReady() {
+   
+ alert('ready1 ......');
+  
+$('#senddata').click(function(evt) {
+ 
+   alert('sending your data......');
+    evt.preventDefault();
+ 
+    var postTo = 'http://edufruit.com/save_shopping.php';
+ 
+    $.post(postTo,({first_name: $('#AffiliateLink').val()}),
+    function(data) {
+        alert(data);
+        if(data != "") {
+            // do something
+            alert('Thanks! = '+ data.LinkGiven);
+        } else {
+            // couldn't connect
+			alert('Sorry');
+        }
+        },'json');
+    return false;
+ 
+});
+}
+ alert('ready 2......');
+ 
+</script>
+
+    </body>
+</html> 
+	
