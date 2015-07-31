@@ -46,24 +46,27 @@
  <script type="text/javascript" src="cordova.js"></script>
 
 <script type="text/javascript">
-
-/*
-
-$('#ff').form({  
-    success:function(data){  
-        $.messager.alert('Info', data, 'info');  
-      }  
-});
-*/
-
-
- alert('ready ......');
-
-
- 
 $(document).ready(function() {
- 
-   alert(' hi you  ......');
+    // are we running in native app or in a browser?
+    window.isphone = false;
+    if(document.URL.indexOf("http://") === -1 
+        && document.URL.indexOf("https://") === -1) {
+        window.isphone = true;
+    }
+
+    if( window.isphone ) {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    } else {
+        onDeviceReady();
+    }
+});
+
+function onDeviceReady() {
+   
+
+ alert('ready1 ......');
+
+  
 $('#senddata').click(function(evt) {
  
    alert('sending your data......');
@@ -86,12 +89,13 @@ $('#senddata').click(function(evt) {
  
 });
 
-
-});
-
+}
 
 
+ alert('ready 2......');
 
+
+ 
 
 
 </script>
