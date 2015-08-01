@@ -1,90 +1,40 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-          <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-          <title>Hello Meriteer</title>
-    </head> 
-<title>Insert title here</title>
- 
-<!-- --> 
+  <head>
+    <title>Notification Example</title>
 
-<script type="text/javascript" src="jquery.min.js"></script>
-  
-    <div style="padding:3px 2px;border-bottom:1px solid #ccc">MErite : Mathematics</div>  
-    <form id="ff">
- 
-<table>
-<tbody> 
-  
-<tr>
-<td>19 * <input type="text" id="AffiliateLink" name="AffiliateLink"></td>
-</tr>
-<tr>
-<td>Answer Image : <input type="text" id="AffiliateImage" name="AffiliateImage"></td>
-</tr>
- 
-<tr><td><input type="button" id="senddata" value="Submit"></td> 
- 
-</tr></tbody></table>
-</form>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-<script type="text/javascript" src="cordova.js"></script> 
-
- <script type="text/javascript" src="phonegap.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    // are we running in native app or in a browser?
-    window.isphone = false;
-    if(document.URL.indexOf("http://") === -1 
-        && document.URL.indexOf("https://") === -1) {
-        window.isphone = true;
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
     }
-    if( window.isphone ) {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    } else {
-        onDeviceReady();
-    }
-});
-function onDeviceReady() {
-   
- alert('ready1 ......');
-  
-$('#senddata').click(function(evt) {
- 
-   alert('We are sending your answer......');
-    evt.preventDefault();
- 
-    var postTo = 'http://edufruit.com/save_shopping.php';
- 
-    $.post(postTo,({first_name: $('#AffiliateLink').val()}),
-    function(data) {
-       // alert(data);
-        if(data != "") {
-            // do something
-          console.log('1-Thanks! = '+ data.LinkGiven);
-          alert('2-Thanks! = '+ data.LinkGiven);
-            navigator.notification.alert("Thanks! = " + data.LinkGiven, function() {}, "Here is your Answer");
-            alert('qqThanks! = '+ data.LinkGiven);
-            
-            
-            
-        } else {
-            // couldn't connect
-			alert('Sorry');
-        }
-        },'json');
-    return false;
- 
-});
-}
-// alert('ready 2......');
- 
-</script>
 
-    </body>
-</html> 
-	
+    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
+    }
+
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    </script>
+  </head>
+  <body>
+    <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+  </body>
+</html>
