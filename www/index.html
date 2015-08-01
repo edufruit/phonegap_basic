@@ -8,10 +8,14 @@
 
     // Wait for Cordova to load
     //
+    
+    try {
+  
     alert('first');
     alert(device.cordova);
-    
-    document.addEventListener("deviceready", onDeviceReady, false);
+     throw new Error( "Error!" );
+
+    document.addEventListener("deviceready", onDeviceReady, true);
 
     // Cordova is ready
     //
@@ -39,7 +43,11 @@
             'Done'                  // buttonName
         );
     }
-
+} catch(e) {
+   console.log(e.name);
+   console.log(e.message);
+   console.log(e.stack);
+}
     </script>
   </head>
   <body>
