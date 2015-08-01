@@ -3,6 +3,8 @@
   <head>
     <title>Notification Example</title>
 
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
@@ -10,17 +12,25 @@
     //
       // Cordova is ready
     //
-    function onDeviceReady() {
-        // Empty
-        alert('device ready');
-    }
-  
+   
+      function onBodyLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+      } 
+      
+      function onDeviceReady() {
+        //Just writing some console messages
+         alert('device ready');
+         console.warn("This is a warning message!");
+        console.log("This is a log message!");
+        console.error("And this is an error message!");
+      }
+
     try {
   
     alert('first');
     alert(device.cordova);
        alert('second');
-    document.addEventListener("deviceready", onDeviceReady, true);
+  
  alert('3rd');
   
 } catch(e) {
@@ -30,7 +40,7 @@
 }
     </script>
   </head>
-  <body>
+  <body onload="onBodyLoad()"> 
     <p><a onclick="alert('clicked me'); ">Show Alert</a></p>
   </body>
 </html>
