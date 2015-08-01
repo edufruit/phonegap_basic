@@ -8,41 +8,21 @@
 
     // Wait for Cordova to load
     //
-    
-    try {
-  
-    alert('first');
-    alert(device.cordova);
-     throw new Error( "Error!" );
-
-    document.addEventListener("deviceready", onDeviceReady, true);
-
-    // Cordova is ready
+      // Cordova is ready
     //
     function onDeviceReady() {
         // Empty
         alert('device ready');
     }
-
-    // alert dialog dismissed
-    function alertDismissed() {
-        // do something
-        
-        alert('dismissed');
-    }
-
-    // Show a custom alertDismissed
-    //
-    function showAlert() {
-      
-      alert('reached show alert function');
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
+  
+    try {
+  
+    alert('first');
+    alert(device.cordova);
+       alert('second');
+    document.addEventListener("deviceready", onDeviceReady, true);
+ alert('3rd');
+  
 } catch(e) {
    console.log(e.name);
    console.log(e.message);
@@ -51,6 +31,6 @@
     </script>
   </head>
   <body>
-    <p><a onclick="alert('clicked me'); showAlert();  alert('3rd');">Show Alert</a></p>
+    <p><a onclick="alert('clicked me'); ">Show Alert</a></p>
   </body>
 </html>
