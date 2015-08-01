@@ -57,13 +57,9 @@
 <feature name="NetworkStatus">
   <param name="android-package" value="org.apache.cordova.NetworkManager"/>
 </feature>
-
-
 <feature name="Notification">
-    <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    <param name="android-package" value="org.apache.cordova.Notification" />
 </feature>
-
-
 <feature name="Storage">
   <param name="android-package" value="org.apache.cordova.Storage"/>
 </feature>
