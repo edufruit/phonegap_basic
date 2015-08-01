@@ -31,7 +31,9 @@
 </form>
 
 
- <script type="text/javascript" src="cordova.js"></script>
+<!-- <script type="text/javascript" src="cordova.js"></script> -->
+
+ <script type="text/javascript" src="phonegap.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -63,8 +65,8 @@ $('#senddata').click(function(evt) {
        // alert(data);
         if(data != "") {
             // do something
-           //
-            
+          console.log('1-Thanks! = '+ data.LinkGiven);
+          alert('2-Thanks! = '+ data.LinkGiven);
             navigator.notification.alert("Thanks! = " + data.LinkGiven, function() {}, "Here is your Answer");
             alert('qqThanks! = '+ data.LinkGiven);
             
