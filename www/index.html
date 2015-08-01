@@ -28,6 +28,8 @@
     // Show a custom alertDismissed
     //
     function showAlert() {
+      
+      alert('reached show alert function');
         navigator.notification.alert(
             'You are the winner!',  // message
             alertDismissed,         // callback
@@ -39,6 +41,6 @@
     </script>
   </head>
   <body>
-    <p><a onclick="alert('clicked me');">Show Alert</a></p>
+    <p><a onclick="alert('clicked me'); showAlert();  alert('3rd');">Show Alert</a></p>
   </body>
 </html>
