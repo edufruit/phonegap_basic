@@ -31,7 +31,7 @@
 </form>
 
 
- <script type="text/javascript" src="cordova.js"></script>
+ <script type="text/javascript" src="phonegap.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -60,10 +60,16 @@ $('#senddata').click(function(evt) {
  
     $.post(postTo,({first_name: $('#AffiliateLink').val()}),
     function(data) {
-        alert(data);
+       // alert(data);
         if(data != "") {
             // do something
-            alert('Thanks! = '+ data.LinkGiven);
+           // alert('Thanks! = '+ data.LinkGiven);
+            
+            
+            navigator.notification.alert("Thanks! = " + data.LinkGiven, function() {}, "Here is your Answer")
+            
+            
+            
         } else {
             // couldn't connect
 			alert('Sorry');
@@ -73,7 +79,7 @@ $('#senddata').click(function(evt) {
  
 });
 }
- alert('ready 2......');
+// alert('ready 2......');
  
 </script>
 
