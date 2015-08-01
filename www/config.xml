@@ -92,4 +92,9 @@
 <plugins>
 <plugin name="WebIntent" value="com.borismus.webintent.WebIntent" />
 </plugins>
+
+<plugin name="Notification" value="org.apache.cordova.Notification"/>
+
+
+
 </widget>
