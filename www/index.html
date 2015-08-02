@@ -19,7 +19,7 @@
       
       function onDeviceReady() {
         //Just writing some console messages
-         alert('device ready');
+         alert('on device ready called');
          console.warn("This is a warning message!");
         console.log("This is a log message!");
         console.error("And this is an error message!");
@@ -28,7 +28,8 @@
     try {
   
     alert('first');
-    alert(device.cordova);
+   alert('w='+window.cordova);
+  // alert(device.cordova);
        alert('second');
   
  alert('3rd');
