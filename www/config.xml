@@ -26,7 +26,7 @@
   <preference name="InAppBrowserStorageEnabled" value="true" />
   <preference name="disallowOverscroll" value="true" />
 -->
-<gap:plugin name="cordova-plugin-dialogs" source="npm" />
+
 <feature name="App">
   <param name="android-package" value="org.apache.cordova.App"/>
 </feature>
@@ -88,6 +88,10 @@
 <plugins>
 <plugin name="WebIntent" value="com.borismus.webintent.WebIntent" />
 <plugin name="Notification" value="org.apache.cordova.Notification"/>
+
+
+<plugin name="cordova-plugin-dialogs" source="npm" />
+
 </plugins>
 
 
