@@ -31,6 +31,15 @@
    alert('w='+window.cordova);
   // alert(device.cordova);
        alert('second'); 
+       
+      for(var key in navigator)
+      {
+        
+        document.write(key + "<br>");
+        
+      }
+       
+       
             navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
           
  alert('3rd');
