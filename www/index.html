@@ -5,7 +5,7 @@
 
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" onload="javascript:window.isCordovaApp = true;" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
     // Wait for Cordova to load
@@ -31,6 +31,7 @@
    alert('w='+window.cordova);
   // alert(device.cordova);
        alert('second'); 
+         alert('is Cordova App ='+window.isCordovaApp);
        
       for(var key in navigator)
       {
