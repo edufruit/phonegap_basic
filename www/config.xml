@@ -17,7 +17,7 @@
 
 <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
 <content src="index.html" />
-
+<gap:plugin name="org.apache.cordova.dialogs" />
 <preference name="loglevel" value="DEBUG" />
 <!--
   <preference name="splashscreen" value="resourceName" />
