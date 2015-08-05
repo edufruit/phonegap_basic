@@ -60,6 +60,12 @@
 <feature name="Notification">
     <param name="android-package" value="org.apache.cordova.Notification" />
 </feature>
+<feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+</feature>
+<feature name="Notification">
+  <param name="wp-package" value="Notification"/>
+</feature>
 <feature name="Storage">
   <param name="android-package" value="org.apache.cordova.Storage"/>
 </feature>
@@ -87,9 +93,7 @@
 <!-- Deprecated plugins element. Remove in 3.0 -->
 <plugins>
 <plugin name="WebIntent" value="com.borismus.webintent.WebIntent" />
-<plugin name="Notification" value="org.apache.cordova.Notification"/>
-
-
+<plugin name="Notification" value="org.apache.cordova.Notification"/> 
 <plugin name="cordova-plugin-dialogs" source="npm" />
 
 </plugins>
