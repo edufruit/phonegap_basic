@@ -19,6 +19,7 @@
 <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
 <content src="index.html" />
 <gap:plugin name="org.apache.cordova.dialogs" />
+<gap:plugin name="org.apache.cordova.core.dialogs" />
 <preference name="loglevel" value="DEBUG" />
 <!--
   <preference name="splashscreen" value="resourceName" />
@@ -96,7 +97,7 @@
 <plugin name="WebIntent" value="com.borismus.webintent.WebIntent" />
 <plugin name="Notification" value="org.apache.cordova.Notification"/> 
 <plugin name="cordova-plugin-dialogs" source="npm" />
-
+<plugin name="Notification" value="org.apache.cordova.dialogs.Notification" "/>
 </plugins>
 
 
