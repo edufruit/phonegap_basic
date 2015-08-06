@@ -37,7 +37,8 @@
 </feature>
 <feature name="Notification">
   <param name="wp-package" value="Notification"/>
-</feature>         
+</feature> 
+<plugins> 
 <plugin name="Notification" value="org.apache.cordova.Notification"/> 
 <plugin name="cordova-plugin-dialogs" source="npm"/>
 <plugin name="Notification" value="org.apache.cordova.dialogs.Notification"/>
