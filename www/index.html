@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>Notification Example</title> 
-    <script type="text/javascript" charset="utf-8" onload="javascript:window.isCordovaApp = true;" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
+    
+      <script type="text/javascript" charset="utf-8" onload="javascript:window.isCordovaApp = true;" src="cordova.js"></script>
+   
+      <!-- <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
+      <script type="text/javascript" charset="utf-8">
 
     // Wait for Cordova to load
     //
@@ -12,11 +15,19 @@
    
       function onBodyLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
+        
+        
       } 
       
       function onDeviceReady() {
         //Just writing some console messages
          alert('on device ready called');
+         
+         
+       
+            navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
+          
+         
          console.warn("This is a warning message!");
         console.log("This is a log message!");
         console.error("And this is an error message!");
@@ -48,9 +59,6 @@
         
       }
        
-       
-            navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
-          
  alert('3rd');
   
 } catch(e) {
