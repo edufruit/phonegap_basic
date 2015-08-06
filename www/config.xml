@@ -13,9 +13,7 @@
  
 <access origin="*"/>
  
-<content src="index.html" /> 
-
-<gap:plugin name="org.apache.cordova.core.dialogs" /> 
+<content src="index.html" />  
 <gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />  
 
 <preference name="loglevel" value="DEBUG" /> 
