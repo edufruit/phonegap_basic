@@ -10,18 +10,18 @@
       <script type="text/javascript" charset="utf-8">
  
       function onBodyLoad() {
-        document.addEventListener("deviceready", BeginMyWork, false); 
+        document.addEventListener("deviceready", onDeviceReady, false); 
       } 
       
-      function BeginMyWork() {
+      function onDeviceReady() {
        
         //works ---
         alert('We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !');
             
-        navigator.notification.alert("We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !" ,  function() {}, "Mario Brothers", "LAUNCH PAD - Launch It");
+       // navigator.notification.alert("We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !" ,  function() {}, "Mario Brothers", "LAUNCH PAD - Launch It");
                                           
-        var t = document.createTextNode("Hello - " + Date());
-        document.body.appendChild(t);  
+        //var t = document.createTextNode("Hello - " + Date());
+        //document.body.appendChild(t);  
           
             
         for(var key in navigator)
@@ -34,7 +34,7 @@
         }
            alert('w='+window.cordova);
           
-        document.getElementById.('takeoff').onclick = function() { navigator.notification.alert('taken off ', function() {}, "HE HE", "WE WE"); }   
+     //   document.getElementById.('takeoff').onclick = function() { navigator.notification.alert('taken off ', function() {}, "HE HE", "WE WE"); }   
           
         console.warn("This is a warning message!");
         console.log("This is a log message!");
