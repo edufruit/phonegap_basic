@@ -15,10 +15,10 @@
       
       function BeginMyWork() {
        
-        //works --- alert('We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !');
+        //works ---
+        alert('We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !');
             
-        navigator.notification.alert("We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !" ,
-                                          function() {}, "Mario Brothers", 'LAUNCH PAD - Launch It ');
+        navigator.notification.alert("We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !" ,  function() {}, "Mario Brothers", "LAUNCH PAD - Launch It");
                                           
         var t = document.createTextNode("Hello - " + Date());
         document.body.appendChild(t);  
@@ -30,14 +30,11 @@
           var breake = document.createElement("DIV"); 
           var t = document.createTextNode(key);
           breake.appendChild(t);
-       //   document.body.appendChild(breake);
+          document.body.appendChild(breake);
         }
-          // alert('w='+window.cordova);
+           alert('w='+window.cordova);
           
-        document.getElementById.('takeoff').onclick = function() { navigator.notification.alert('taken off '); } 
-
-          
-          
+        document.getElementById.('takeoff').onclick = function() { navigator.notification.alert('taken off ', function() {}, "HE HE", "WE WE"); }   
           
         console.warn("This is a warning message!");
         console.log("This is a log message!");
@@ -85,5 +82,13 @@
   <body onload="onBodyLoad()"> 
     <p><a onclick="alert('clicked me'); ">Show Alert</a></p>
     <input type="button" value=" TAKE OFF " id="takeoff" />
+  
+  
+  
+  
   </body>
+  
+  
+  
+  
 </html>
