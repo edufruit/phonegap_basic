@@ -20,15 +20,22 @@
       function onDeviceReady() {
         //Just writing some console messages
         
-        alert('on device ready called');
+        alert('We are ready!');
         
         navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
+        var t = document.createTextNode("Hello - " + Date());
+        document.body.appendChild(t);  
+        //document.write(Date());
+            
+            
             
         for(var key in navigator)
         { 
-          document.write(key + "<br>"); 
+         // document.write(key + "<br>");  
+          var ss = document.createTextNode(key+ "<br>");
+          document.body.appendChild(ss);
         }
-           alert('w='+window.cordova);
+          // alert('w='+window.cordova);
         console.warn("This is a warning message!");
         console.log("This is a log message!");
         console.error("And this is an error message!");
@@ -39,7 +46,7 @@
     alert('first');
    //alert('w='+window.cordova);
   // alert(device.cordova);
-       alert('second'); 
+     //  alert('second'); 
          alert('is Cordova App ='+window.isCordovaApp);
      
          
