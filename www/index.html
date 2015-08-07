@@ -31,9 +31,11 @@
             
         for(var key in navigator)
         { 
-         // document.write(key + "<br>");  
-          var ss = document.createTextNode(key+ "<br>");
-          document.body.appendChild(ss);
+          
+          var breake = document.createElement("DIV"); 
+          var t = document.createTextNode(key);
+          breake.appendChild(t);
+          document.body.appendChild(breake);
         }
           // alert('w='+window.cordova);
         console.warn("This is a warning message!");
@@ -51,22 +53,24 @@
      
          
       document.write("<br><h3>this is new line  : </h3>");
-          
+         
+      document.write("<br><strong>notification object</strong> will not be displayed in below list because not loaded yet");
+      
         for(var key in navigator)
         { 
           document.write(key + "<br>"); 
         }
          
-         
-      document.write("<br><h1>this is new line for WINDOW : </h1>");
-                 
-      for(var key in window)
-      {
-        
-        document.write(key + "<br>");
-        
-      }
+       /*  
        
+        document.write("<br><h1>this is new line for WINDOW : </h1>");
+                 
+        for(var key in window)
+        {
+          document.write(key + "<br>");
+        }
+       
+       */
  
   
 } catch(e) {
