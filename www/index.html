@@ -14,21 +14,24 @@
     //
    
       function onBodyLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-        
-        
+        document.addEventListener("deviceready", onDeviceReady, false); 
       } 
       
       function onDeviceReady() {
         //Just writing some console messages
-         alert('on device ready called');
+        
+        alert('on device ready called');
+        
+        navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
+            
+      for(var key in navigator)
+      {
+        
+        document.write(key + "<br>");
+        
+      }
          
-         
-       
-            navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
-          
-         
-         console.warn("This is a warning message!");
+        console.warn("This is a warning message!");
         console.log("This is a log message!");
         console.error("And this is an error message!");
       }
@@ -40,14 +43,7 @@
   // alert(device.cordova);
        alert('second'); 
          alert('is Cordova App ='+window.isCordovaApp);
-       
-      for(var key in navigator)
-      {
-        
-        document.write(key + "<br>");
-        
-      }
-         
+     
          
       document.write("<br><h1>this is new line for WINDOW : </h1>");
         
