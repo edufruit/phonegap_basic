@@ -6,28 +6,23 @@
       <script type="text/javascript" charset="utf-8" onload="javascript:window.isCordovaApp = true;" src="cordova.js"></script>
    
       <!-- <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
+     
       <script type="text/javascript" charset="utf-8">
-
-    // Wait for Cordova to load
-    //
-      // Cordova is ready
-    //
-   
+ 
       function onBodyLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false); 
+        document.addEventListener("deviceready", BeginMyWork, false); 
       } 
       
-      function onDeviceReady() {
-        //Just writing some console messages
-        
-        alert('We are ready!');
-        
-        navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
+      function BeginMyWork() {
+       
+        //works --- alert('We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !');
+            
+        navigator.notification.alert("We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !" ,
+                                          function() {}, "Mario Brothers", 'LAUNCH PAD - Launch It ');
+                                          
         var t = document.createTextNode("Hello - " + Date());
         document.body.appendChild(t);  
-        //document.write(Date());
-            
-            
+          
             
         for(var key in navigator)
         { 
@@ -35,7 +30,7 @@
           var breake = document.createElement("DIV"); 
           var t = document.createTextNode(key);
           breake.appendChild(t);
-          document.body.appendChild(breake);
+       //   document.body.appendChild(breake);
         }
           // alert('w='+window.cordova);
         console.warn("This is a warning message!");
@@ -54,11 +49,11 @@
          
       document.write("<br><h3>this is new line  : </h3>");
          
-      document.write("<br><strong>notification object</strong> will not be displayed in below list because not loaded yet");
+      //document.write("<br><strong>notification object</strong> will not be displayed in below list because not loaded yet");
       
         for(var key in navigator)
         { 
-          document.write(key + "<br>"); 
+        //  document.write(key + "<br>"); 
         }
          
        /*  
@@ -71,16 +66,20 @@
         }
        
        */
- 
+  
   
 } catch(e) {
    console.log(e.name);
    console.log(e.message);
    console.log(e.stack);
 }
+
+document.getElementByID.('takeoff').onclick = function(){ navigator.notification.alert('taken off :) '); };
+
     </script>
   </head>
   <body onload="onBodyLoad()"> 
     <p><a onclick="alert('clicked me'); ">Show Alert</a></p>
+    <input type="button" value=" TAKE OFF " id="takeoff" />
   </body>
 </html>
