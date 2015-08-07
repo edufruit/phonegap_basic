@@ -24,13 +24,11 @@
         
         navigator.notification.alert("Thanks!" , function() {}, "Here is your Answer", 'FINISH ME');
             
-      for(var key in navigator)
-      {
-        
-        document.write(key + "<br>");
-        
-      }
-         
+        for(var key in navigator)
+        { 
+          document.write(key + "<br>"); 
+        }
+           alert('w='+window.cordova);
         console.warn("This is a warning message!");
         console.log("This is a log message!");
         console.error("And this is an error message!");
@@ -39,15 +37,22 @@
     try {
   
     alert('first');
-   alert('w='+window.cordova);
+   //alert('w='+window.cordova);
   // alert(device.cordova);
        alert('second'); 
          alert('is Cordova App ='+window.isCordovaApp);
      
          
-      document.write("<br><h1>this is new line for WINDOW : </h1>");
-        
+      document.write("<br><h3>this is new line  : </h3>");
+          
+        for(var key in navigator)
+        { 
+          document.write(key + "<br>"); 
+        }
          
+         
+      document.write("<br><h1>this is new line for WINDOW : </h1>");
+                 
       for(var key in window)
       {
         
@@ -55,7 +60,7 @@
         
       }
        
- alert('3rd');
+ 
   
 } catch(e) {
    console.log(e.name);
