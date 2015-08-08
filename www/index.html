@@ -25,12 +25,7 @@
           breake.appendChild(t);
           document.body.appendChild(breake);
         }
-        //   alert('w='+window.cordova);
-document.getElementById.('takeoff').onclick =
-                                  function(){
-                                                  navigator.notification.alert('taken off ', function() {}, "HE HE", "WE WE"); 
-                                            }
-
+       
 
         console.warn("This is a warning message!");
         console.log("This is a log message!");
@@ -38,7 +33,8 @@ document.getElementById.('takeoff').onclick =
       }
 
     try {
-  
+
+
     alert('first');
     
          alert('is Cordova App ='+window.isCordovaApp);
@@ -58,6 +54,16 @@ document.getElementById.('takeoff').onclick =
   <body onload="onBodyLoad()"> 
     <p><a onclick="alert('clicked me'); ">Show Alert</a></p>
      <p>  <input type="button" value=" TAKE OFF " id="takeoff" /></p>
+   <script>
+     
+       document.getElementById.('takeoff').onclick =
+                                  function(){
+                                                  navigator.notification.alert('taken off ', function() {}, "HE HE", "WE WE"); 
+                                            }
+     
+   </script>
+   
+   
    
   </body>
   
