@@ -8,12 +8,22 @@
       <script type="text/javascript" charset="utf-8">
  
       function onBodyLoad() {
+       
         document.addEventListener("deviceready", onDeviceReady, false); 
-              clickingbutton();
-        
-        
-      } 
+     
+     
+        clickingbutton();
       
+      } 
+  
+      function clickingbutton(){
+  
+         document.getElementById.('takeoff').onclick =
+                                  function(){
+                                                  navigator.notification.alert('taken off ', function() {}, "HE HE", "WE WE"); 
+                                            }
+      }
+        
     function onDeviceReady() {
        
         alert('We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !');
@@ -58,16 +68,6 @@
   <body onload="onBodyLoad()"> 
     <p><a onclick="alert('clicked me'); ">Show Alert</a></p>
      <p>  <input type="button" value=" TAKE OFF " id="takeoff" /></p>
-   <script>
-       
-  function clickingbutton(){
-       document.getElementById.('takeoff').onclick =
-                                  function(){
-                                                  navigator.notification.alert('taken off ', function() {}, "HE HE", "WE WE"); 
-                                            }
-  }
-            
-   </script>
    
    
    
