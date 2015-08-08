@@ -4,9 +4,7 @@
     <title>Notification Example</title> 
     
       <script type="text/javascript" charset="utf-8" onload="javascript:window.isCordovaApp = true;" src="cordova.js"></script>
-   
-      <!-- <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> -->
-     
+    
       <script type="text/javascript" charset="utf-8">
  
       function onBodyLoad() {
@@ -15,14 +13,9 @@
       
       function onDeviceReady() {
        
-        //works ---
         alert('We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !');
             
-       // navigator.notification.alert("We are ready! Tanker Fully Loaded, Ready to Attack! Roger that !" ,  function() {}, "Mario Brothers", "LAUNCH PAD - Launch It");
-                                          
-        //var t = document.createTextNode("Hello - " + Date());
-        //document.body.appendChild(t);  
-          
+      
             
         for(var key in navigator)
         { 
@@ -38,38 +31,18 @@
           
         console.warn("This is a warning message!");
         console.log("This is a log message!");
-        console.error("And this is an error message!");
+        console.error("And this is an error message!");q
       }
 
     try {
   
     alert('first');
-   //alert('w='+window.cordova);
-  // alert(device.cordova);
-     //  alert('second'); 
+    
          alert('is Cordova App ='+window.isCordovaApp);
      
          
       document.write("<br><h3>this is new line  : </h3>");
-         
-      //document.write("<br><strong>notification object</strong> will not be displayed in below list because not loaded yet");
-       /*  
-       
-        for(var key in navigator)
-        { 
-        //  document.write(key + "<br>"); 
-        }
-         
-      
-        document.write("<br><h1>this is new line for WINDOW : </h1>");
-                 
-        for(var key in window)
-        {
-          document.write(key + "<br>");
-        }
-       
-       */
-  
+          
   
 } catch(e) {
    console.log(e.name);
@@ -81,14 +54,9 @@
   </head>
   <body onload="onBodyLoad()"> 
     <p><a onclick="alert('clicked me'); ">Show Alert</a></p>
-    <input type="button" value=" TAKE OFF " id="takeoff" />
-  
-  
-  
-  
+     <p>  <input type="button" value=" TAKE OFF " id="takeoff" /></p>
+   
   </body>
   
-  
-  
-  
+   
 </html>
